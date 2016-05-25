@@ -2,6 +2,7 @@ var AppComponent = ng.core
   .Component({
     selector: "app",
     directives: [],
+    providers: [ng.http.JSONP_PROVIDERS],
     template:
     `
       {{weather | json}}
@@ -15,13 +16,13 @@ var AppComponent = ng.core
       jsonp.get(url)
         .subscribe(function(response) {
           console.log(response.json());
-          vm.weather = response.json()
+          vm.weather = response.json();
         })
     }]
   })
 
 document.addEventListener('DOMContentLoaded', function() {
-  ng.platform.browser.bootstrap(AppComponent, [ng.http.JSONP_PROVIDERS])
+  ng.platform.browser.bootstrap(AppComponent, [])
 });
 
 //"http://api.openweathermap.org/data/2.5/weather?q=london&APPID=57d36da6b8187a992393dc6a0f4c96c3&callback=JSON_CALLBACK"
