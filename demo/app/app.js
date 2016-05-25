@@ -4,20 +4,18 @@ var AppComponent = ng.core
     directives: [],
     template:
     `
-      AJAX!
-
+      {{weather | json}}
     `
   })
   .Class({
     constructor: [ng.http.Jsonp, function(jsonp) {
       var vm = this;
-      vm.cats = [];
-      var url = "http://api.openweathermap.org/data/2.5/weather?q=london&APPID=57d36da6b8187a992393dc6a0f4c96c3&callback=JSON_CALLBACK"
+      vm.weather = {};
+      var url = "http://api.openweathermap.org/data/2.5/weather?q=london&APPID=57d36da6b8187a992393dc6a0f4c96c3&callback=JSONP_CALLBACK"
       jsonp.get(url)
-        .toPromise()
-        .then(function(response) {
+        .subscribe(function(response) {
           console.log(response.json());
-          vm.cats = response.json()
+          vm.weather = response.json()
         })
     }]
   })
