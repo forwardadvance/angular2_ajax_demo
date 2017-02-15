@@ -112,17 +112,22 @@ webpackJsonp([0],{
 	var weather_service_1 = __webpack_require__(/*! ./weather.service */ 26);
 	var WeatherComponent = (function () {
 	    function WeatherComponent(weatherService) {
-	        var _this = this;
 	        this.weatherService = weatherService;
-	        this.weatherService.get('london')
+	    }
+	    WeatherComponent.prototype.handleInput = function (evt) {
+	        this.loc = evt.target.value;
+	    };
+	    WeatherComponent.prototype.handleSearch = function () {
+	        var _this = this;
+	        this.weatherService.get(this.loc)
 	            .subscribe(function (data) {
 	            _this.weather = data;
 	        });
-	    }
+	    };
 	    WeatherComponent = __decorate([
 	        core_1.Component({
 	            selector: 'weather',
-	            template: "\n      <pre>{{weather | json}}</pre>\n    "
+	            template: "\n      <input (input)=\"handleInput($event)\" />{{loc}}\n      <button (click)=\"handleSearch()\">Go</button>\n      <pre>{{weather | json}}</pre>\n    "
 	        }), 
 	        __metadata('design:paramtypes', [(typeof (_a = typeof weather_service_1.WeatherService !== 'undefined' && weather_service_1.WeatherService) === 'function' && _a) || Object])
 	    ], WeatherComponent);

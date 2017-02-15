@@ -4,17 +4,24 @@ import {WeatherService} from './weather.service';
 @Component({
     selector: 'weather',
     template: `
+      <input (input)="handleInput($event)" />{{loc}}
+      <button (click)="handleSearch()">Go</button>
       <pre>{{weather | json}}</pre>
     `
 })
 export class WeatherComponent {
   weather: any;
+  loc: string;
   constructor(public weatherService: WeatherService) {
-    this.weatherService.get('london')
+  }
+  handleInput(evt) {
+    this.loc = evt.target.value;
+  }
+  handleSearch() {
+    this.weatherService.get(this.loc)
       .subscribe(data => {
         this.weather = data;
       });
-
-
   }
+
 }
