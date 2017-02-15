@@ -12,9 +12,8 @@ import {WeatherService} from './weather.service';
 export class WeatherComponent {
   weather: any;
   loc: string;
-  constructor(public weatherService: WeatherService) {
-  }
-  handleInput(evt) {
+  constructor(public weatherService: WeatherService) {}
+  handleInput(evt:any) {
     this.loc = evt.target.value;
   }
   handleSearch() {
