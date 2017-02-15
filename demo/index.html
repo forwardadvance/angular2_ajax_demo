@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-
-  <!-- 1. Load libraries -->
-  <!-- IE required polyfill -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-sh im.min.js"></script> -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.3/angular2-polyfills.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.3/Rx.umd.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.3/angular2-all.umd.js"></script>
-
-  <!-- 2. Load our 'modules' -->
-  <script src='app/app.js'></script>
+  <title>Angular Component Demo</title>
+  <link rel="stylesheet" type="text/css" href="app.build/app.build.css" />
 </head>
 <body>
-<app></app>
+  <app></app>
+  <script src="app.build/polyfills.build.js"></script>
+  <script src="app.build/vendor.build.js"></script>
+  <script src="app.build/app.build.js"></script>
 </body>
 </html>
