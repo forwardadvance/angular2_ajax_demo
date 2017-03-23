@@ -3,8 +3,8 @@ import {Jsonp} from '@angular/http';
 
 @Injectable()
 export class WeatherService {
-  constructor(public jsonp: Jsonp) {
-  }
+  constructor(public jsonp: Jsonp) {}
+
   get(location:string) {
     var url = [
       "http://api.openweathermap.org/data/2.5/weather?q=",
