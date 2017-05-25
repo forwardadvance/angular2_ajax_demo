@@ -14,6 +14,7 @@ export class WeatherService {
 
     return this.jsonp.get(url)
       .map((res) => res.json())
-
   }
 }
+
+// http://api.openweathermap.org/data/2.5/weather?q=london&APPID=57d36da6b8187a992393dc6a0f4c96c3

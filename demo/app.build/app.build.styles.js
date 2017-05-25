@@ -45,10 +45,10 @@
 /*!**********************!*\
   !*** ./app/app.scss ***!
   \**********************/
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
-/***/ }
+/***/ })
 /******/ ]);
 //# sourceMappingURL=app.build.styles.js.map

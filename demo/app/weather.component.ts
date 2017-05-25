@@ -12,15 +12,18 @@ import {WeatherService} from './weather.service';
 export class WeatherComponent {
   weather: any;
   loc: string;
+
   constructor(public weatherService: WeatherService) {}
+
   handleInput(evt:any) {
     this.loc = evt.target.value;
   }
+
   handleSearch() {
     this.weatherService.get(this.loc)
+      // .map((data) => data.weather[0].description)
       .subscribe(data => {
         this.weather = data;
       });
   }
-
 }

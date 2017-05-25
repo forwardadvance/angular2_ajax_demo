@@ -4,21 +4,21 @@ webpackJsonp([0],{
 /*!********************!*\
   !*** ./app/app.ts ***!
   \********************/
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var platform_browser_dynamic_1 = __webpack_require__(/*! @angular/platform-browser-dynamic */ 1);
-	var app_module_1 = __webpack_require__(/*! ./app.module */ 23);
+	var app_module_1 = __webpack_require__(/*! ./app.module */ 39);
 	platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 
 
-/***/ },
+/***/ }),
 
-/***/ 23:
+/***/ 39:
 /*!***************************!*\
   !*** ./app/app.module.ts ***!
   \***************************/
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -31,11 +31,11 @@ webpackJsonp([0],{
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 3);
-	var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ 21);
-	var app_component_1 = __webpack_require__(/*! ./app.component */ 24);
-	var weather_component_1 = __webpack_require__(/*! ./weather.component */ 25);
-	var weather_service_1 = __webpack_require__(/*! ./weather.service */ 26);
-	var http_1 = __webpack_require__(/*! @angular/http */ 27);
+	var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ 38);
+	var app_component_1 = __webpack_require__(/*! ./app.component */ 40);
+	var weather_component_1 = __webpack_require__(/*! ./weather.component */ 41);
+	var weather_service_1 = __webpack_require__(/*! ./weather.service */ 42);
+	var http_1 = __webpack_require__(/*! @angular/http */ 43);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -56,13 +56,13 @@ webpackJsonp([0],{
 	exports.AppModule = AppModule;
 
 
-/***/ },
+/***/ }),
 
-/***/ 24:
+/***/ 40:
 /*!******************************!*\
   !*** ./app/app.component.ts ***!
   \******************************/
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -90,13 +90,13 @@ webpackJsonp([0],{
 	exports.AppComponent = AppComponent;
 
 
-/***/ },
+/***/ }),
 
-/***/ 25:
+/***/ 41:
 /*!**********************************!*\
   !*** ./app/weather.component.ts ***!
   \**********************************/
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -109,7 +109,7 @@ webpackJsonp([0],{
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 3);
-	var weather_service_1 = __webpack_require__(/*! ./weather.service */ 26);
+	var weather_service_1 = __webpack_require__(/*! ./weather.service */ 42);
 	var WeatherComponent = (function () {
 	    function WeatherComponent(weatherService) {
 	        this.weatherService = weatherService;
@@ -137,13 +137,13 @@ webpackJsonp([0],{
 	exports.WeatherComponent = WeatherComponent;
 
 
-/***/ },
+/***/ }),
 
-/***/ 26:
+/***/ 42:
 /*!********************************!*\
   !*** ./app/weather.service.ts ***!
   \********************************/
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -156,7 +156,7 @@ webpackJsonp([0],{
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(/*! @angular/core */ 3);
-	var http_1 = __webpack_require__(/*! @angular/http */ 27);
+	var http_1 = __webpack_require__(/*! @angular/http */ 43);
 	var WeatherService = (function () {
 	    function WeatherService(jsonp) {
 	        this.jsonp = jsonp;
@@ -178,9 +178,10 @@ webpackJsonp([0],{
 	    var _a;
 	}());
 	exports.WeatherService = WeatherService;
+	// http://api.openweathermap.org/data/2.5/weather?q=london&APPID=57d36da6b8187a992393dc6a0f4c96c3
 
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=app.build.js.map

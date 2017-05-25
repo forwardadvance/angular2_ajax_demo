@@ -1,0 +1,9 @@
+div {
+  display:flex;
+  max-width:500px;
+}
+
+input {
+  padding:10px;
+  flex-grow: 2;
+}

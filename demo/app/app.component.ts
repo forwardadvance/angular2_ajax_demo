@@ -9,6 +9,5 @@ import {WeatherComponent} from './weather.component';
     `
 })
 export class AppComponent {
-  constructor() {
-  }
+  constructor() {}
 }
